@@ -1,0 +1,1713 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: none;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+
+html.no-scroll {
+    overflow: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 375px;
+}
+
+.header{
+    position: relative;
+    z-index: 5;
+} 
+
+.header__top{
+    padding: 10px 0;
+    position: relative;
+}
+
+.header__top:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    opacity: 0.6;
+    background: #1E2E36;
+    bottom: 0;
+}
+
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.header__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu{
+  display: none;
+  position: relative;
+}
+
+.mobile-menu__button {
+  position: fixed;
+  top: 15px;
+  z-index: 30;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #1E2E36;
+  transition: 0.4s;
+}
+
+.mobile-menu__button:hover .mobile-menu__lines {
+    filter: brightness(0.7);
+}
+
+.mobile-menu__button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.mobile-menu__lines::before,
+.mobile-menu__lines::after,
+.mobile-menu__lines {
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #212121;
+    transition: 0.4s;
+}
+
+.mobile-menu__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile-menu__lines::before {
+  content: '';
+  top: -8px;
+}
+
+.mobile-menu__lines::after {
+  content: '';
+  top: 8px;
+}
+
+.mobile-menu__active .mobile-menu__lines {
+  background-color: transparent;
+}
+
+.mobile-menu__active .mobile-menu__lines::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.mobile-menu__active .mobile-menu__lines::after{
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.mobile-menu__nav {
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 100%;
+  background-color: #2A2C34;
+  overflow-y: auto;
+  left: -100%;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.mobile-menu__active .mobile-menu__nav {
+  left: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mobile-menu__link {
+  padding: 15px 35px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: #F2F2F2;
+  border-bottom: 1px solid rgba(242, 242, 242, .15);
+  font-family: 'Proxima Nova';
+}
+
+.mobile-menu__link:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.mobile-menu__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.mobile-menu__active .mobile-menu__overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.header__social{
+    width: 590px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social__grid{
+    display: flex;
+    align-items: center;
+}
+.social__text{
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1E2E36;
+    margin-right: 5px;
+}
+.social__icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social__icon:nth-last-child{
+    margin: 0 5px;
+}
+.social__icon_facebook{
+    margin: 0 5px;
+}
+.social__phone{
+    display: flex;
+    align-items: center;
+}
+.social__tel{
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #1E2E36;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.social__arrow{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.header__menu{
+    
+}
+.menu__list{
+    display: flex;
+    align-items: center;
+}
+.menu__item{
+    margin-right: 15px;
+}
+.menu__item:last-child{
+    margin-right: 0;
+}
+.menu__link{
+    position: relative;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #1E2E36;
+    text-decoration: none;
+}
+.menu__link:hover:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #44C697;
+    left: 0;
+    bottom: 0;
+}
+
+.header__button{
+    padding: 15px 0;
+}
+.header__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__nav{
+    margin-right: 115px;
+}
+.nav__list{
+    display: flex;
+}
+.nav__item{
+    /*display: flex;
+    align-items: center;*/
+    margin-right: 15px;
+}
+.nav__item:last-child{
+    margin-right: 0;
+}
+.nav__link{
+    display: flex;
+    align-items: center;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #1E2E36;
+    text-decoration: none;
+}
+.nav__link:hover{
+    color: #44C697;
+}
+.nav__icon{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+}
+.header__logo{
+    margin-right: auto;
+}
+.logo__link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo__title{
+    margin-left: 15px;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #1E2E36;
+} 
+.logo__color{
+    color: #44C697;
+}
+.header__basket{
+    display: flex;
+    align-items: center;
+}
+.basket__link{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #1E2E36;
+    text-decoration: none;
+}
+.basket__icon{
+    margin-right: 5px;
+}
+.basket__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 278px;
+    height: 51px;
+    background: #44C697;
+    border-radius: 3px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.main__news{
+    position: relative;
+    background: url(../img/bedstead.jpg) no-repeat 50% 50%/cover;
+    height: 785px;
+}
+
+.news__card{
+    position: relative;
+    width: 462px;
+    height: 670px;
+    background: #FFFFFF;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.news__card:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    background: #44C697;
+}
+
+.news__title{
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    color: #1E2E36;
+    margin-bottom: 50px;
+}
+
+.news__subtitle{
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #1E2E36;
+    margin-bottom: 10px;
+}
+
+.news__text{
+    width: 313px;
+    font-family: 'Proxima Nova';
+    font-size: 36px;
+    line-height: 45px;
+    color: #1E2E36;
+    margin: 0 auto 30px;
+}
+
+.news__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 209px;
+    height: 51px;
+    background: #44C697;
+    border-radius: 3px;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 auto 50px;
+    text-decoration: none;
+}
+
+.news__pagination{
+    /*display: flex;
+    justify-content: center;*/
+}
+
+.news__count{
+    height: 45px;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1E2E36;
+    text-transform: uppercase;
+}
+
+.news__number{
+    font-size: 36px;
+    line-height: 45px;
+    color: #1E2E36;
+}
+
+.news__button{
+    display: flex;
+    justify-content: center;
+}
+
+.news__prev, .news__next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #1E2E36;
+}
+
+.news__prev:hover, .news__next:hover{
+    background: #1E2E36;
+    border: 0
+}
+
+.news__icon {
+    fill: #1E2E36;
+}
+
+.news__prev:hover .news__icon,
+.news__next:hover .news__icon{
+    fill: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.news__prev {
+    margin-right: 8px;
+}
+
+.news__slider {
+    position: relative;
+}
+
+.news__slider .news__item {
+    display: flex;
+}
+
+.advantage__title{
+    position: relative;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #1E2E36;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.advantage__title:before{
+    content: '';
+    position: absolute;
+    margin-left: -4px;
+    top: 3px;
+    width: 20px;
+    height: 50px;
+    background: #44C697;
+    z-index: -1;
+}
+
+.advantage__slider{
+    position: relative;
+    max-width: 1820px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.advantage__card{
+    max-width: 586px;
+    position: relative;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: block;
+    margin-right: 30px;
+    border-radius: 3px;
+}
+
+.advantage__link{
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.advantage__link:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(30, 46, 54, 0.5), rgba(30, 46, 54, 0.5));
+}
+
+.advantage__block{
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+}
+
+.advantage__caption{
+    display: inline-block;
+    position: relative;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transform: translate3d(0,43px,0);
+}
+
+.advantage__caption:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #44C697;
+    left: 0;
+    bottom: 0;
+}
+
+.advantage__link:hover .advantage__caption{
+    transition: transform 0.35s;
+    transform: translate3d(0,-15px,0);
+}
+
+.advantage__text{
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: translate3d(0,100px,0);
+}
+
+.advantage__link:hover .advantage__text{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+.advantage__slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -15px 0 0 0;
+    z-index: 25;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+}
+
+.advantage__slider .slick-arrow.slick-prev{
+    left: 15px;
+    background: url('../img/slick-left.svg') 0 0 / 100% no-repeat;
+}
+
+.advantage__slider .slick-arrow.slick-next{
+    right: 45px;
+    background: url('../img/slick-left.svg') 0 0 / 100% no-repeat;
+    transform: rotate(-180deg);
+}
+
+.advantage__slider .slick-arrow.slick-prev:hover{
+    background: url('../img/slick-right-hover.svg') 0 0 / 100% no-repeat;
+    transform: rotate(-180deg);
+} 
+
+.advantage__slider .slick-arrow.slick-next:hover{
+    background: url('../img/slick-right-hover.svg') 0 0 / 100% no-repeat;
+    transform: rotate(0deg);
+}
+
+.advantage__slider .slick-list {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.category__title{
+    position: relative;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #1E2E36;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+.category__title:before{
+    content: '';
+    position: absolute;
+    margin-left: -4px;
+    top: 3px;
+    width: 20px;
+    height: 50px;
+    background: #44C697;
+    z-index: -1;
+}
+
+.category__tabs {
+    text-align: center;
+}
+
+.category__tabs>input[type="radio"] {
+  display: none;
+}
+
+.category__tabs>input[type="radio"]:checked+label {
+  background-color: #ffffff;
+}
+
+.category__tabs>input[type="radio"]:checked+label>.category__text:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #44C697;
+    left: 0;
+    bottom: 0;
+}
+
+.category__tabs>input[type="radio"]:checked+label>.category__icon{
+    fill: #44C697;
+}
+
+.category__tabs>.category__content {
+  display: none;
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3,
+#tab-btn-4:checked~#content-4,
+#tab-btn-5:checked~#content-5,
+#tab-btn-6:checked~#content-6 {
+  display: block;
+}
+
+.category__tabs>.category__label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+  margin: 0 90px 87px;
+}
+
+.category__icon{
+    fill: #1E2E36;
+}
+
+.category__text{
+    position: relative;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E2E36;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.category__row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.category__cards{
+    width: 586px;
+    height: 360px;
+    background: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+.category__card{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.category__card:hover{
+    transform: translateY(-25px);
+}
+
+.category__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+}
+
+.category__card:hover .category__block{
+    background: #44C697;
+}
+
+.category__card:hover .category__name, .category__card:hover .category__price, .category__card:hover .category__discounts{
+    color: #ffffff;
+}
+
+.category__name, .category__price, .category__discounts{
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #1E2E36;
+}
+
+.category__discounts{
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: line-through;
+    color: #BCBDBB;
+    margin-left: 10px;
+}
+
+.category__new, .category__sales, .category__action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 119px;
+    height: 33px;
+    background: #1E2E36;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.category__sales{
+    width: 143px;
+    margin-bottom: 5px;
+}
+
+.category__action{
+    display: flex;
+    width: 84px;
+    height: 33px;
+    background: #FF1B1B;
+    top: 48px;
+}
+
+.category__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 51px;
+    background: #44C697;
+    border-radius: 3px;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.about-us__title{
+    position: relative;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #1E2E36;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+.about-us__title:before{
+    content: '';
+    position: absolute;
+    margin-left: -4px;
+    top: 3px;
+    width: 20px;
+    height: 50px;
+    background: #44C697;
+    z-index: -1;
+}
+
+.about-us__block{
+    position: relative;
+    height: 675px;
+}
+
+.about-us__info{
+    position: absolute;
+    width: 791px;
+    height: 475px;
+    left: 0;
+    top: 100px;
+    background: #FFFFFF;
+    padding: 50px 30px 50px 50px;
+    margin: 0 -50px;
+    z-index: 5;
+}
+
+.about-us__info:before{
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    background: #44C697;
+    border-radius: 0 3px 3px 0;
+}
+
+.about-us__text, .about-us__color{
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1E2E36;
+}
+
+.about-us__color{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.about-us__text{
+    margin-bottom: 15px;
+}
+
+.about-us__text:last-child{
+    margin-bottom: 0;
+}
+
+.about-us__color{
+    color: #44C697;
+}
+
+.about-us__pic{
+    position: absolute;
+    right: -50px;
+    top: 0;
+}
+
+.consultation__title{
+    position: relative;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #1E2E36;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.consultation__title:before{
+    content: '';
+    position: absolute;
+    margin-left: -4px;
+    top: 3px;
+    width: 20px;
+    height: 50px;
+    background: #44C697;
+    z-index: -1;
+}
+
+.consultation__block{
+    position: relative;
+    height: 675px;
+}
+
+.consultation__pic {
+    position: absolute;
+    left: -50px;
+    top: 0;
+}
+
+.consultation__card{
+    position: absolute;
+    width: 513px;
+    height: 457px;
+    right: 0;
+    top: 100px;
+    background: #FFFFFF;
+    padding: 50px 50px 50px 30px;
+    margin: 0 -50px;
+    z-index: 5;
+}
+
+.consultation__card:before{
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    background: #44C697;
+    border-radius: 3px 0 0 3px;
+}
+
+.consultation__caption{
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #1E2E36;
+    margin-bottom: 30px;
+}
+
+.consultation__field{
+    width: 100%;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #1E2E36;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+.consultation__field:placeholder{
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    line-height: 22px;
+    color: #1E2E36;
+}
+
+.consultation__btn{
+    width: 100%;
+    height: 51px;
+    background: #44C697;
+    border-radius: 3px;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-bottom: 30px;
+}
+
+.consultation__text{
+    width: 365px;
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1E2E36;
+}
+
+.consultation__tel{
+    font-family: Proxima Nova;
+    font-weight: 700;
+}
+
+.footer{
+    margin-top: 109px;
+    background: #1E2E36;
+    width: 100%;
+    height: 520px;
+}
+
+.footer:before{
+    content: '';
+    position: absolute;
+    width: 1089px;
+    height: 520px;
+    right: 0;
+    background: url(../img/illustration-of-the-living-room-interior.jpg) no-repeat;
+}
+
+.footer__row{
+    display: flex;
+    position: relative;
+}
+
+.footer__block{
+    position: relative;
+    width: 780px;
+}
+
+.footer__logo{
+    padding: 50px 0;
+}
+
+.footer__logo_link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__title{
+    margin-left: 15px;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #ffffff;
+}
+
+.footer__color{
+    color: #44C697;
+}
+
+.footer__box{
+    display: flex;
+}
+
+.footer__list{
+    margin-right: 55px;
+}
+
+.footer__list:last-child{
+    margin-right: 87px;
+}
+
+.footer__item{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.footer__item:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 14px;
+    height: 2px;
+    background: #44C697;
+}
+
+.footer__item:hover:before{
+    background: #ffffff;
+}
+
+.footer__link{
+    padding-left: 19px;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer__link:hover{
+    color: #44C697;
+}
+
+.footer__contact{
+
+}
+
+.footer__map{
+    margin-bottom: 15px;
+}
+
+.footer__map-link{
+    display: flex;
+    align-items: center;
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer__map-link:hover{
+    color: #44C697;
+}
+
+.footer__icon{
+    margin-right: 5px;
+    fill: #ffffff;
+}
+
+.footer__map-link:hover .footer__icon{
+    fill: #44C697;
+}
+
+.footer__calendar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer__calendar img{
+    width: 24px;
+    height: 24px;
+}
+
+.footer__text{
+    padding-left: 5px;
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.footer__phone{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.footer__phone-icon{
+    stroke: #ffffff;
+    fill: none;
+}
+
+.footer__phone:hover .footer__phone-icon{
+    stroke: #44C697;
+}
+
+.footer__row-tel{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.footer__tel{
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer__phone:hover .footer__tel{
+    color: #44C697;
+}
+
+.footer__lead{
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.footer__col{
+    display: flex;
+    align-items: center;
+}
+
+.footer__social{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__social:hover .footer__net{
+    fill: #44C697;
+}
+
+.footer__net{
+    fill: #ffffff;
+}
+
+.footer__social_facebook{
+    margin: 0 5px;
+}
+
+.footer__basement{
+    display: flex;
+    align-items: center;
+    margin-top: 85px;
+}
+
+.footer__release{
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-right: 25%;
+}
+
+.footer__development{
+    display: flex;
+    align-items: center;
+}
+
+.footer__subtext{
+    margin-left: 3px;
+    font-family: 'Cuprum';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer__subtext:hover{
+    color: #44C697;
+}
+
+.footer__pic{
+    right: -50px;
+    position: absolute;
+    top: 0;
+}
+
+.back-to-top{
+    position: fixed;
+    left: 36px;
+    bottom: 175px;
+    width: 50px;
+    height: 50px;
+    background: #44C697;
+    border-radius: 50%;
+    text-align: center;
+    padding: 15px;
+    transition: background .25s;
+    display: none;
+    z-index: 22;
+    box-shadow: 0px 4px 12px rgba(130, 130, 130, 0.2);
+}
+
+.back-to-top:hover{
+    background: #09e898;
+}
+
+.back-to-top__icon:hover {
+    fill: #000;
+}
+
+.back-to-top__icon{
+    fill: #fff;
+}
+
+.back-to-top:hover .back-to-top__icon{
+    fill: #000;
+}
